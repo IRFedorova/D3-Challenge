@@ -301,19 +301,19 @@ function visualize(theData) {
     .attr("class", function(d) {
       return "stateCircle " + d.abbr;
     })
-    // Hover rules
-    .on("mouseover", function(d) {
-      // Show the tooltip
-      toolTip.show(d, this);
-      // Highlight the state circle's border
-      d3.select(this).style("stroke", "#323232");
-    })
-    .on("mouseout", function(d) {
-      // Remove the tooltip
-      toolTip.hide(d);
-      // Remove highlight
-      d3.select(this).style("stroke", "#e3e3e3");
-    });
+    // // Hover rules
+    // .on("mouseover", function(d) {
+    //   // Show the tooltip
+    //   toolTip.show(d, this);
+    //   // Highlight the state circle's border
+    //   d3.select(this).style("stroke", "#323232");
+    // })
+    // .on("mouseout", function(d) {
+    //   // Remove the tooltip
+    //   toolTip.hide(d);
+    //   // Remove highlight
+    //   d3.select(this).style("stroke", "#e3e3e3");
+    // });
 
   // With the circles on our graph, we need matching labels.
   // Let's grab the state abbreviations from our data
