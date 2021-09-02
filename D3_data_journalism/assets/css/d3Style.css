@@ -13,7 +13,7 @@
 
 .inactive {
   font-weight: lighter;
-  fill: #c9c9c9;
+  fill: #e4b943;
   transition: fill 0.3s ease-out;
   text-anchor: middle;
 }
@@ -31,7 +31,7 @@
 }
 
 .stateCircle {
-  fill: #89bdd3;
+  fill: #13a065;
   stroke: #e3e3e3;
 }
 
