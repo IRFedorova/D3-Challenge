@@ -59,7 +59,7 @@ xTextRefresh();
 
 //  xText to append three text SVG files
 // position and space between label vertically.
-// 1. Poverty
+
 xText
   .append("text")
   .attr("y", -26)
@@ -67,22 +67,7 @@ xText
   .attr("data-axis", "x")
   .attr("class", "aText active x")
   .text("In Poverty (%)");
-// // 2. Age
-// xText
-//   .append("text")
-//   .attr("y", 0)
-//   .attr("data-name", "age")
-//   .attr("data-axis", "x")
-//   .attr("class", "aText inactive x")
-//   .text("Age (Median)");
-// // 3. Income
-// xText
-//   .append("text")
-//   .attr("y", 26)
-//   .attr("data-name", "income")
-//   .attr("data-axis", "x")
-//   .attr("class", "aText inactive x")
-//   .text("Household Income (Median)");
+
 
 // B) Left Axis
 
@@ -102,26 +87,9 @@ var yText = d3.select(".yText");
   );
 
 
-// // Now we append the text.
-// // 1. Obesity
-// yText
-//   .append("text")
-//   .attr("y", -26)
-//   .attr("data-name", "obesity")
-//   .attr("data-axis", "y")
-//   .attr("class", "aText active y")
-//   .text("Obese (%)");
 
-// // 2. Smokes
-// yText
-//   .append("text")
-//   .attr("x", 0)
-//   .attr("data-name", "smokes")
-//   .attr("data-axis", "y")
-//   .attr("class", "aText inactive y")
-//   .text("Smokes (%)");
 
-// 3. Lacks Healthcare
+// Lacks Healthcare
 yText
   .append("text")
   .attr("y", 26)
@@ -316,104 +284,7 @@ function visualize(theData) {
       d3.select("." + d.abbr).style("stroke", "#e3e3e3");
     });
 
-  // // Part 4: Make the Graph Dynamic
 
-  // // Select all axis text and add this d3 click event.
-  // d3.selectAll(".aText").on("click", function() {
-
-  //   var self = d3.select(this);
-
-  //   if (self.classed("inactive")) {
-  //     // Grab the name and axis saved in label.
-  //     var axis = self.attr("data-axis");
-  //     var name = self.attr("data-name");
-
-  //     // When x is the saved axis, execute this:
-  //     if (axis === "x") {
-  //       // Make curX the same as the data name.
-  //       curX = name;
-
-  //       // Change the min and max of the x-axis
-  //       xMinMax();
-
-  //       // Update the domain of x.
-  //       xScale.domain([xMin, xMax]);
-
-  //       // Now use a transition when we update the xAxis.
-  //       svg.select(".xAxis").transition().duration(300).call(xAxis);
-
-  //       // With the axis changed, let's update the location of the state circles.
-  //       d3.selectAll("circle").each(function() {
-
-  //         d3
-  //           .select(this)
-  //           .transition()
-  //           .attr("cx", function(d) {
-  //             return xScale(d[curX]);
-  //           })
-  //           .duration(300);
-  //       });
-
-  //       // We need change the location of the state texts, too.
-  //       d3.selectAll(".stateText").each(function() {
-  //         // We give each state text the same motion tween as the matching circle.
-  //         d3
-  //           .select(this)
-  //           .transition()
-  //           .attr("dx", function(d) {
-  //             return xScale(d[curX]);
-  //           })
-  //           .duration(300);
-  //       });
-
-  //       // Finally, change the classes of the last active label and the clicked label.
-  //       labelChange(axis, self);
-  //     }
-  //     else {
-  //       // When y is the saved axis, execute this:
-  //       // Make curY the same as the data name.
-  //       curY = name;
-
-  //       // Change the min and max of the y-axis.
-  //       yMinMax();
-
-  //       // Update the domain of y.
-  //       yScale.domain([yMin, yMax]);
-
-  //       // Update Y Axis
-  //       svg.select(".yAxis").transition().duration(300).call(yAxis);
-
-  //       // With the axis changed, let's update the location of the state circles.
-  //       d3.selectAll("circle").each(function() {
-  //         // Each state circle gets a transition for it's new attribute.
-  //         // This will lend the circle a motion tween
-  //         // from it's original spot to the new location.
-  //         d3
-  //           .select(this)
-  //           .transition()
-  //           .attr("cy", function(d) {
-  //             return yScale(d[curY]);
-  //           })
-  //           .duration(300);
-  //       });
-
-  //       // We need change the location of the state texts, too.
-  //       d3.selectAll(".stateText").each(function() {
-  //         // We give each state text the same motion tween as the matching circle.
-  //         d3
-  //           .select(this)
-  //           .transition()
-  //           .attr("dy", function(d) {
-  //             return yScale(d[curY]) + circRadius / 3;
-  //           })
-  //           .duration(300);
-  //       });
-
-  //       // Finally, change the classes of the last active label and the clicked label.
-  //       labelChange(axis, self);
-  //     }
-  //   }
-  // });
 
 
 }
