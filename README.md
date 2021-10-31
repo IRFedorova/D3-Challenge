@@ -1,20 +1,20 @@
 Folder: D3_data_journalism
 
-![Visualization](D3_data_journalism/images/d30.JPG)
+![Visualization](D3_data_journalism_bonus/images/d30.JPG)
 A scatter plot that represents each state with circle elements. 
 
+
+Folder: D3_data_journalism_bonus (More Data, More Dynamics)
+![Visualization](D3_data_journalism_bonus/images/d3_dj_all.GIF)
+It includes more demographics and more risk factors. 
+with additional labels in a scatter plot.
+There are click events so that users can decide which data to display. 
+Transitions are animated for the circles' locations as well as the range of axes. 
+There are three risk factors for each axis. 
+Tooltips display the data that the user has selected.
+
+*****************************************************************
 You'll need to use python -m http.server to run the visualization. 
 This will host the page at localhost:8000 in your web browser.
 
-Additional requirements:
-Folder: D3_data_journalism_bonus
-1. More Data, More Dynamics
-You're going to include more demographics and more risk factors. 
-Place additional labels in your scatter plot and give them click events so that your users can decide which data to display. 
-Animate the transitions for your circles' locations as well as the range of your axes. Do this for two risk factors for each axis. 
-Or, for an extreme challenge, create three for each axis.
-
-Hint: Try binding all of the CSV data to your circles. This will let you easily determine their x or y values when you click the labels.
-
-2. Incorporate d3-tip
-While the ticks on the axes allow us to infer approximate values for each circle, it's impossible to determine the true value without adding another layer of data. Enter tooltips: developers can implement these in their D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. Add tooltips to your circles and display each tooltip with the data that the user has selected.
+*****************************************************************
